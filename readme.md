@@ -1,6 +1,6 @@
 # QUUID
 
-Generate uuid like redis stream style
+Generate uuid like redis stream entry ID, refer to https://redis.io/topics/streams-intro
 
 ## Example
 
