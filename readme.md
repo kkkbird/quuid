@@ -16,5 +16,8 @@ func main() {
 	id := quuid.UUID()
 	fmt.Println(id)
 }
+```
 
+``` shell
+1548237747771-0
 ```
