@@ -29,8 +29,8 @@ func (d *QUUID) UUID() string {
 	return fmt.Sprintf("%d-%d", d.first, d.last)
 }
 
-// NewQUUID create a new uuid generator
-func NewQUUID() *QUUID {
+// New create a new quuid generator
+func New() *QUUID {
 	return &QUUID{}
 }
 

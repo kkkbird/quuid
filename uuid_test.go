@@ -22,7 +22,7 @@ func TestQUUID(t *testing.T) {
 }
 
 func TestQUUID2(t *testing.T) {
-	generator := NewQUUID()
+	generator := New()
 	id1 := generator.UUID()
 
 	time.Sleep(time.Millisecond)
