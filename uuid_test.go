@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/kkkbird/qlog"
+	"github.com/sirupsen/logrus"
 )
 
 var (
-	log = qlog.WithField("pkg", "quuid")
+	log = logrus.WithField("pkg", "quuid")
 )
 
 func TestQUUID(t *testing.T) {
@@ -35,5 +35,12 @@ func TestQUUID2(t *testing.T) {
 func BenchmarkUUID(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		_ = UUID()
+	}
+}
+
+func BenchmarkUUIDWithHWAddress(b *testing.B) {
+	g := New(WithHWAddressPrefix)
+	for i := 0; i < b.N; i++ {
+		_ = g.UUID()
 	}
 }
